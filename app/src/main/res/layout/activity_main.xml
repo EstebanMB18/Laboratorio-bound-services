@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ODÓMETRO DE TUTORÍAS" android:textSize="13sp" android:letterSpacing="0.12" android:textColor="#1559BA" android:textStyle="bold" android:layout_marginTop="14dp"/>
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Distancia de recorrido" android:textColor="#142B4F" android:textStyle="bold" android:textSize="27sp" android:layout_marginTop="6dp"/>
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Registra tus desplazamientos hacia tutorías presenciales." android:textColor="#63738A" android:textSize="14sp" android:layout_marginTop="7dp" android:layout_marginBottom="20dp"/>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:orientation="vertical" android:background="@drawable/card_bg">
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="RECORRIDO ACTUAL" android:textColor="#63738A" android:textStyle="bold" android:textSize="12sp" />
+<TextView android:id="@+id/distance" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0.0 m" android:gravity="center" android:textColor="#1559BA" android:textSize="55sp" android:textStyle="bold" android:paddingTop="14dp" android:paddingBottom="8dp"/>
+<TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Listo para iniciar" android:gravity="center" android:textColor="#415672" android:textSize="14sp"/>
+<TextView android:id="@+id/currentLocation" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ubicación: pendiente" android:textColor="#526783" android:gravity="center" android:textSize="13sp" android:layout_marginTop="12dp"/>
+</LinearLayout>
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Configuración del GPS" android:textSize="18sp" android:textColor="#142B4F" android:textStyle="bold" android:layout_marginTop="24dp" android:layout_marginBottom="8dp"/>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:background="@drawable/card_bg">
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Precisión mínima del movimiento (metros)" android:textColor="#324662"/>
+<EditText android:id="@+id/minDistance" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" android:singleLine="true" android:text="5" android:hint="Ej. 5" />
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tiempo de actualización (segundos)" android:textColor="#324662" android:layout_marginTop="8dp"/>
+<EditText android:id="@+id/interval" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:singleLine="true" android:text="3" android:hint="Ej. 3" />
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Estos valores se aplican al iniciar una nueva sesión." android:textSize="12sp" android:textColor="#64748B" android:layout_marginTop="5dp"/>
+</LinearLayout>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="horizontal">
+<Button android:id="@+id/startButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="55dp" android:text="Iniciar" android:textAllCaps="false" android:textColor="#FFFFFF" android:background="@drawable/primary_bg"/>
+<Space android:layout_width="10dp" android:layout_height="1dp"/>
+<Button android:id="@+id/stopButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="55dp" android:text="Finalizar" android:textAllCaps="false" android:enabled="false" android:textColor="#1559BA" android:background="@drawable/secondary_bg"/>
+</LinearLayout>
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Historial y consolidado" android:textSize="18sp" android:textColor="#142B4F" android:textStyle="bold" android:layout_marginTop="25dp" android:layout_marginBottom="8dp"/>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="17dp" android:orientation="vertical" android:background="@drawable/card_bg">
+<TextView android:id="@+id/totalText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Distancia total: 0.0 m" android:textStyle="bold" android:textColor="#1559BA" android:textSize="18sp"/>
+<TextView android:id="@+id/countText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sesiones registradas: 0" android:textColor="#526783" android:layout_marginTop="6dp"/>
+<Button android:id="@+id/exportButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Exportar reporte CSV" android:textAllCaps="false" android:layout_marginTop="7dp"/>
+<TextView android:id="@+id/history" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sin recorridos guardados" android:textColor="#324662" android:lineSpacingExtra="5dp" android:layout_marginTop="10dp"/>
+</LinearLayout>
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Para medir, concede ubicación precisa y mantén la aplicación visible durante la sesión. La medición se detiene y guarda al salir de la pantalla." android:textColor="#64748B" android:textSize="12sp" android:layout_marginTop="17dp" android:layout_marginBottom="20dp"/>
+</LinearLayout>
+</ScrollView>
